@@ -22,37 +22,37 @@ app.geometry("720x480")  # Setting the window size
 app.title("Mastermind Game")  # Setting the window title
 
 # UI Elements
-# Frame 1: Collecting user's first and last name
+# Frame 1: 
 frame1 = CTkFrame(app)
 frame1.pack(padx=10, pady=10)
 
 label_1 = CTkLabel(frame1, text="Player 1 Set a multidigit number")
 label_1.pack(side=LEFT, padx=10, pady=10)
 
-Fname = StringVar()  # Variable to hold first name
+Fname = StringVar()  
 num1 = CTkEntry(frame1, width=100, height=40, textvariable=Fname)
 num1.pack(side=LEFT, padx=10, pady=10)
 
 
 
-# Frame 2: Collecting user's birth year and date
+# Frame 2: 
 frame2 = CTkFrame(app)
 frame2.pack(padx=10, pady=10)
 
 label_2 = CTkLabel(frame2, text="Player 2 guess the number")
 label_2.pack(side=LEFT, padx=10, pady=10)
 
-Lname = StringVar()  # Variable to hold last name
+Lname = StringVar()  
 num2 = CTkEntry(frame2, width=100, height=40, textvariable=Lname)
 num2.pack(side=RIGHT, padx=10, pady=10)
 
 
 
-# Button to trigger password generation
+# Button 
 button = CTkButton(master=app, text="Play", command=play)
 button.pack(padx=10, pady=10)
 
-# Frame 3: Display the generated password
+# Frame 3:
 frame3 = CTkFrame(app)
 frame3.pack(padx=10, pady=5)
 
