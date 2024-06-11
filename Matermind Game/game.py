@@ -4,28 +4,10 @@ from tkinter import *
 import customtkinter  
 from customtkinter import *  
 
-# Function to generate a password based on user input
-def swap():
-    label_1.configure(text="Player 2 Set a multidigit number")
-    label_2.configure(text="Plater 1 guess the number")
-    result1.configure(text="It's swap time")
-
 
 def play():
-    try:
-        # Get user input
-        cr=''
-        set_num = int(num1.get())  # First name
-        guess_num = int(num2.get())  # Last name
-        if set_num == guess_num:
-            result1.configure(text=f"You WON!!!\nHe crowned Mastermind!")
-            swap()
-        elif NONE:
-            for i in str(guess_num):
-                if i in str(set_num):
-                    cr += i
-            result1.configure(text=f"Correct digits : {cr}")
-#        result1.configure(text=f"Player 1 set {set_num} and guess is {guess_num}")
+    try: 
+        None
     except:
         # Handle any errors (e.g., if user inputs are invalid)
         result1.configure(text="Oh! It seems you entered some wrong values\nEnter valid details please !!!")
