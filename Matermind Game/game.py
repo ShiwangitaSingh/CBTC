@@ -1,10 +1,14 @@
+# Important library
 import maskpass
 
+# Functions
+# function for setting the secret number
 def setting():
     s = maskpass.askpass(prompt="Set the number: ")
     l = len(s)
     return s,l
 
+# Play function
 def play():
     s,l = setting()
     hint = list("*"*l)
