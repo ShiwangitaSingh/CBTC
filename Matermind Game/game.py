@@ -31,14 +31,14 @@ def play():
             return atempt
             break
 
-print("\nPlayer 1 TURN\n")
+print("\nPlayer 1 set the number Player 2 guess the number\n")
 p1 = play()
-print("\nPlayer 2 TURN\n")
+print("\nPlayer 2 set the number Player 1 guess the number\n\n")
 p2 = play()
 
 if p1==p2:
     print("\nIt's a tie")
 elif p1>p2:
-    print(f"\nPlayer 1 won by {p1-p2} attempts")
+    print(f"\nPlayer 2 won by {p1-p2} attempts")
 elif p2>p1:
-    print(f"\nPlayer 2 won by {p2-p1} attempts")
+    print(f"\nPlayer 1 won by {p2-p1} attempts")
