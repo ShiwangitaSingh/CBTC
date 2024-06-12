@@ -1,63 +1,40 @@
-# Importing required libraries
-import tkinter  
-from tkinter import *  
-import customtkinter  
-from customtkinter import *  
+import maskpass
 
+def setting():
+    s = maskpass.askpass(prompt="Set the number: ")
+    l = len(s)
+    return s,l
 
 def play():
-    try: 
-        None
-    except:
-        # Handle any errors (e.g., if user inputs are invalid)
-        result1.configure(text="Oh! It seems you entered some wrong values\nEnter valid details please !!!")
+    s,l = setting()
+    hint = list("*"*l)
+    atempt = 0
+    while True:
+        g = input("guess : ")
+        atempt +=1
+        count = 0
+        for i in s:
+            if i in g:
+                try:
+                    if s[count] == g[count]:
+                        hint[count] = i
+                except:
+                    print(f'enter {len(s)} digit number')
+            count += 1
+        print(x:="".join(hint))
+        if x == s:
+            print("You guessed it!!!")
+            return atempt
+            break
 
+print("\nPlayer 1 TURN\n")
+p1 = play()
+print("\nPlayer 2 TURN\n")
+p2 = play()
 
-# Setting the appearance of the app to match the system's theme
-customtkinter.set_appearance_mode("System")
-
-# Creating the main app window
-app = customtkinter.CTk()
-app.geometry("720x480")  # Setting the window size
-app.title("Mastermind Game")  # Setting the window title
-
-# UI Elements
-# Frame 1: 
-frame1 = CTkFrame(app)
-frame1.pack(padx=10, pady=10)
-
-label_1 = CTkLabel(frame1, text="Player 1 Set a multidigit number")
-label_1.pack(side=LEFT, padx=10, pady=10)
-
-Fname = StringVar()  
-num1 = CTkEntry(frame1, width=100, height=40, textvariable=Fname)
-num1.pack(side=LEFT, padx=10, pady=10)
-
-
-
-# Frame 2: 
-frame2 = CTkFrame(app)
-frame2.pack(padx=10, pady=10)
-
-label_2 = CTkLabel(frame2, text="Player 2 guess the number")
-label_2.pack(side=LEFT, padx=10, pady=10)
-
-Lname = StringVar()  
-num2 = CTkEntry(frame2, width=100, height=40, textvariable=Lname)
-num2.pack(side=RIGHT, padx=10, pady=10)
-
-
-
-# Button 
-button = CTkButton(master=app, text="Play", command=play)
-button.pack(padx=10, pady=10)
-
-# Frame 3:
-frame3 = CTkFrame(app)
-frame3.pack(padx=10, pady=5)
-
-result1 = CTkLabel(frame3, text="Let's Go")
-result1.pack(padx=10, pady=10)
-
-# Running the app
-app.mainloop()
+if p1==p2:
+    print("its a tie")
+elif p1>p2:
+    print(f"player 1 won by {p1-p2} attempts")
+elif p2>p1:
+    print(f"player 2 won by {p2-p1} attempts")
