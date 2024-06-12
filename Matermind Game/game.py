@@ -34,7 +34,7 @@ def play():
 print("\nPlayer 1 set the number Player 2 guess the number\n")
 p2 = play()
 if p2 == 1:
-    print("/nPlayer 2 won and is crowned MASTERMIND\n")
+    print("\nPlayer 2 won and is crowned MASTERMIND\n")
     quit()
 print("\nPlayer 2 set the number Player 1 guess the number\n")
 p1 = play()
