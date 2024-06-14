@@ -1,6 +1,5 @@
 ### Voice Recorder
-
-**Two players play the game against each other: Player 1 and Player 2**
+This Python project provides a simple script to record audio from the microphone, save it as a .wav file, and play it back. It utilizes the sounddevice library for capturing and playing audio, and wavio for saving audio to a .wav file.
 
 - Player 1 plays first by setting a multi-digit number.
 - Player 2 now tries his first attempt at guessing the number.
