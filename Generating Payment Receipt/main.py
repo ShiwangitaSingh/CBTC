@@ -1,6 +1,7 @@
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 from reportlab.lib import colors
+from datetime import datetime
 
 def create_receipt(file_path, receipt_info):
     # Initialize the canvas with the output file path and page size 612 x 792
@@ -60,8 +61,9 @@ def create_receipt(file_path, receipt_info):
     c.save()
 
 # Example usage
+current_time = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
 receipt_info = {
-    "date": "2024-06-12",
+    "date": f"{current_time}",
     "payee": "ACME Corporation",
     "payer": "John Doe",
     "items": [
