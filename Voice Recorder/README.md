@@ -1,13 +1,9 @@
 ### Voice Recorder
-This Python project provides a simple script to record audio from the microphone, save it as a .wav file, and play it back. It utilizes the sounddevice library for capturing and playing audio, and wavio for saving audio to a .wav file.
+This Python project provides a simple script to record audio from the microphone, save it as a **.wav** file, and play it back. It utilizes the sounddevice library for capturing and playing audio, and wavio for saving audio to a **.wav** file.<br>
 
-- Player 1 plays first by setting a multi-digit number.
-- Player 2 now tries his first attempt at guessing the number.
-- If Player 2 succeeds in his first attempt (despite odds which are highly unlikely) he wins the game and is crowned Mastermind! If not, then Player 1 hints by revealing which digits or numbers Player 2 got correct.
-- The game continues till Player 2 eventually is able to guess the number entirely.
-- Now, Player 2 gets to set the number and Player 1 plays the part of guessing the number.
-- If Player 1 is able to guess the number within a lesser number of tries than Player 2 took, then Player 1 wins the game and is crowned Mastermind.
-If not, then Player 2 wins the game.
-
+**Features**
+- Record Audio: Captures audio from the microphone for a user specified duration.
+- Save Audio: Saves the recorded audio to a .wav file.
+- Playback Audio: Plays the recorded audio from the .wav file.
 
 
